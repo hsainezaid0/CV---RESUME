@@ -1,12 +1,12 @@
 :root {
   color-scheme: dark;
-  --background: #020705;
-  --paper: #0a1510;
-  --green: #00e69a;
-  --cyan: #00dce8;
-  --ink: #edf4ef;
-  --muted: #c1d0c7;
-  --line: #2c6146;
+  --background: #080d1b;
+  --paper: #111a2d;
+  --green: #63ead3;
+  --cyan: #b0a0ff;
+  --ink: #edf3ff;
+  --muted: #a6b4cc;
+  --line: #26334d;
   --font: "Courier New", Courier, monospace;
 }
 
@@ -26,13 +26,13 @@ body {
   font-size: 10.6pt;
   line-height: 1.5;
   background-image:
-    radial-gradient(ellipse at 20% 25%, #00e69a10, transparent 50%),
-    radial-gradient(ellipse at 85% 75%, #00e69a0d, transparent 50%);
+    radial-gradient(ellipse at 20% 25%, #63ead310, transparent 50%),
+    radial-gradient(ellipse at 85% 75%, #63ead30d, transparent 50%);
 }
 
 ::selection {
   background: var(--green);
-  color: #032316;
+  color: #07201d;
 }
 
 a {
@@ -61,7 +61,7 @@ button {
   top: -80px;
   left: 16px;
   padding: 10px 14px;
-  color: #032316;
+  color: #07201d;
   background: var(--green);
   z-index: 10;
 }
@@ -92,7 +92,7 @@ button {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 11px 16px;
-  background: #10291c;
+  background: #182136;
   color: var(--green);
   font-size: 13px;
   cursor: pointer;
@@ -100,7 +100,7 @@ button {
 
 .print-button:hover {
   border-color: var(--green);
-  background: #143626;
+  background: #152039;
 }
 
 .layout {
@@ -113,10 +113,10 @@ button {
   grid-template-columns: 54mm minmax(0, 1fr);
   align-items: start;
   gap: 8mm;
-  background: linear-gradient(145deg, #0d1c14, var(--paper) 55%);
+  background: linear-gradient(145deg, #0b1222, var(--paper) 55%);
   border: 1px solid var(--line);
   border-radius: 14px;
-  box-shadow: 0 0 42px #00e69a10, 0 20px 65px #0008;
+  box-shadow: 0 0 42px #63ead310, 0 20px 65px #0008;
 }
 
 .profile {
@@ -150,7 +150,7 @@ button {
 
 .profile-title {
   margin: 14px 0 0;
-  color: #dceee3;
+  color: #edf3ff;
   font-size: 11.1pt;
   line-height: 1.55;
 }
@@ -186,7 +186,7 @@ button {
 
 .contact-item dd {
   margin: 0;
-  color: #e1eee6;
+  color: #edf3ff;
   font-size: 9.4pt;
   overflow-wrap: anywhere;
 }
@@ -196,7 +196,7 @@ button {
   padding: 12px 0;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  color: #b4d9c3;
+  color: #a6b4cc;
   font-size: 9.2pt;
   line-height: 1.6;
 }
@@ -212,7 +212,7 @@ button {
 .section-heading {
   padding: 8px 10px;
   margin-bottom: 12px;
-  background: #00e69a09;
+  background: #63ead309;
   border: 1px solid var(--line);
   border-left: 3px solid var(--green);
   border-radius: 5px;
@@ -230,7 +230,7 @@ h2 {
 
 h3 {
   margin: 0;
-  color: #f1f7f3;
+  color: #edf3ff;
   font-size: 10.7pt;
   line-height: 1.4;
   font-weight: 700;
@@ -265,7 +265,7 @@ h3 {
 
 .entry-date {
   flex-shrink: 0;
-  color: #a8cfba;
+  color: #b0a0ff;
   font-size: 8.5pt;
   white-space: nowrap;
 }
@@ -273,7 +273,7 @@ h3 {
 .school-subtitle {
   display: block;
   margin-top: 3px;
-  color: #cdded3;
+  color: #a6b4cc;
   font-size: 9.5pt;
   font-weight: 400;
   line-height: 1.45;
@@ -296,7 +296,7 @@ h3 {
 
 .skill-group h3 {
   display: inline;
-  color: #e1f1e7;
+  color: #edf3ff;
   font-size: 10pt;
 }
 
@@ -332,7 +332,7 @@ h3 {
 
 .project-stack {
   flex-shrink: 0;
-  color: #a8d5bb;
+  color: #b0a0ff;
   font-size: 8.5pt;
   white-space: nowrap;
 }
@@ -345,7 +345,7 @@ h3 {
 }
 
 .language-list dt {
-  color: #edf5f0;
+  color: #edf3ff;
   font-size: 10pt;
   font-weight: 700;
 }
@@ -368,7 +368,7 @@ h3 {
 
 .strengths strong {
   display: block;
-  color: #dceee3;
+  color: #edf3ff;
   font-size: 9.7pt;
   margin-bottom: 5px;
 }
@@ -614,4 +614,77 @@ h3 {
   a {
     text-decoration: none !important;
   }
+}
+
+/* Comfortable web CV layout; retain the dedicated print stylesheet. */
+@media screen {
+ body { font-size: 17px; line-height: 1.8; background: radial-gradient(ellipse at 85% 15%, #28214a77, transparent 45%), radial-gradient(ellipse at 0 55%, #123d4355, transparent 40%), #080d1b; }
+ .toolbar { width: 1180px; margin-top: 28px; font-size: 16px; gap: 20px; }
+ .print-button { font-size: 16px; padding: 12px 18px; }
+ .layout { width: 1180px; min-height: 0; padding: 36px; margin: 24px auto 40px; grid-template-columns: minmax(240px, 300px) minmax(0, 1fr); gap: 36px; background: #0b1222e8; }
+ .profile { padding-right: 28px; }
+ .profile-title { font-size: 19px; line-height: 1.6; margin-top: 18px; }
+ .profile-summary { font-size: 17px; line-height: 1.85; margin-top: 26px; padding-top: 24px; }
+ .contact-list { margin-top: 28px; }
+ .contact-item { margin-bottom: 24px; }
+ .contact-item dt { font-size: 15px; margin-bottom: 8px; }
+ .contact-item dd { font-size: 17px; }
+ .job-note { font-size: 16px; padding: 18px 0; line-height: 1.8; }
+ .cv-section + .cv-section { margin-top: 36px; }
+ .section-heading { padding: 14px 18px; margin-bottom: 24px; background: #63ead309; }
+ h2 { font-size: 19px; line-height: 1.5; letter-spacing: .5px; }
+ h3 { font-size: 19px; line-height: 1.5; }
+ .entry-top, .project-top { flex-direction: column; align-items: flex-start; gap: 8px; }
+ .entry-date, .project-stack { font-size: 16px; white-space: normal; }
+ .entry-description { font-size: 17px; margin-top: 12px; line-height: 1.8; }
+ .school-subtitle { font-size: 16px; margin-top: 6px; }
+ .education-entry + .education-entry, .project-entry + .project-entry { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line); }
+ .skill-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+ .skill-group, .skill-group:first-child { margin: 0; padding: 20px; background: #111a2d; border: 1px solid var(--line); border-radius: 8px; }
+ .skill-group.wide { grid-column: 1 / -1; }
+ .skill-group h3 { display: block; font-size: 18px; margin-bottom: 10px; }
+ .skill-group h3::after { content: none; }
+ .skill-group p { display: block; font-size: 17px; line-height: 1.8; }
+ .language-list { gap: 18px; }
+ .language-list > div { padding: 16px; background: #111a2d; border: 1px solid var(--line); border-radius: 8px; }
+ .language-list dt { font-size: 17px; }
+ .language-list dd { font-size: 16px; margin-top: 8px; }
+ .strengths { font-size: 17px; margin-top: 24px; padding-top: 24px; line-height: 1.8; }
+ .strengths strong { font-size: 17px; margin-bottom: 10px; }
+}
+@media screen and (max-width: 900px) {
+ .layout { display: block; padding: 28px; }
+ .profile { padding: 0 0 28px; margin-bottom: 32px; border-right: 0; border-bottom: 1px solid var(--line); }
+ .name-family { display: inline; }
+ .contact-list { display: flex; flex-wrap: wrap; gap: 20px 32px; }
+ .contact-item { margin: 0; }
+}
+@media screen and (max-width: 540px) {
+ .layout { width: auto; max-width: none; margin: 16px 12px 24px; padding: 24px 18px; gap: 0; }
+ .toolbar { width: auto; max-width: none; margin: 16px 12px 0; font-size: 13px; gap: 12px; }
+ .toolbar-label { flex: 1 1 140px; letter-spacing: 1px; }
+ .print-button { min-height: 44px; padding: 10px 14px; font-size: 14px; }
+ .profile h1 { font-size: clamp(30px, 8vw, 36px); overflow-wrap: anywhere; }
+ .profile-title { font-size: 18px; }
+ .profile-summary, .entry-description, .skill-group p, .strengths { font-size: 16px; line-height: 1.7; }
+ .profile-summary { margin-top: 20px; padding-top: 20px; }
+ .contact-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; margin-top: 22px; }
+ .contact-item { min-width: 0; }
+ .contact-item dt { margin-bottom: 2px; font-size: 13px; }
+ .contact-item dd { font-size: 16px; }
+ .contact-item a { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; overflow-wrap: anywhere; }
+ .profile { padding-bottom: 24px; margin-bottom: 24px; }
+ .job-note { margin-top: 20px; padding: 14px 0; }
+ .cv-section + .cv-section { margin-top: 28px; }
+ .skill-grid, .language-list { grid-template-columns: minmax(0,1fr); }
+ .skill-grid { gap: 12px; }
+ .skill-group { padding: 16px; min-width: 0; }
+ .skill-group.wide { grid-column: auto; }
+ .section-heading { padding: 12px 14px; margin-bottom: 18px; }
+ h2 { font-size: 17px; overflow-wrap: anywhere; }
+ h3 { font-size: 18px; overflow-wrap: anywhere; }
+ .entry-date, .project-stack { font-size: 14px; overflow-wrap: anywhere; }
+ .language-list { gap: 10px; }
+ .language-list > div { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; padding: 12px 16px; }
+ .language-list dd { margin: 0; }
 }
