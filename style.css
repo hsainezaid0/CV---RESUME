@@ -1,13 +1,13 @@
 :root {
-  color-scheme: dark;
-  --background: #080d1b;
-  --paper: #111a2d;
-  --green: #63ead3;
-  --cyan: #b0a0ff;
-  --ink: #edf3ff;
-  --muted: #a6b4cc;
-  --line: #26334d;
-  --font: "Courier New", Courier, monospace;
+  color-scheme: light;
+  --background: #f2f2f2;
+  --paper: #ffffff;
+  --green: #262626;
+  --cyan: #525252;
+  --ink: #202020;
+  --muted: #595959;
+  --line: #d6d6d6;
+  --font: Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -25,14 +25,11 @@ body {
   font-family: var(--font);
   font-size: 10.6pt;
   line-height: 1.5;
-  background-image:
-    radial-gradient(ellipse at 20% 25%, #63ead310, transparent 50%),
-    radial-gradient(ellipse at 85% 75%, #63ead30d, transparent 50%);
 }
 
 ::selection {
   background: var(--green);
-  color: #07201d;
+  color: #ffffff;
 }
 
 a {
@@ -61,7 +58,7 @@ button {
   top: -80px;
   left: 16px;
   padding: 10px 14px;
-  color: #07201d;
+  color: #ffffff;
   background: var(--green);
   z-index: 10;
 }
@@ -92,7 +89,7 @@ button {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 11px 16px;
-  background: #182136;
+  background: #ffffff;
   color: var(--green);
   font-size: 13px;
   cursor: pointer;
@@ -100,7 +97,7 @@ button {
 
 .print-button:hover {
   border-color: var(--green);
-  background: #152039;
+  background: #e8e8e8;
 }
 
 .layout {
@@ -113,10 +110,10 @@ button {
   grid-template-columns: 54mm minmax(0, 1fr);
   align-items: start;
   gap: 8mm;
-  background: linear-gradient(145deg, #0b1222, var(--paper) 55%);
+  background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 14px;
-  box-shadow: 0 0 42px #63ead310, 0 20px 65px #0008;
+  box-shadow: 0 8px 30px #0000000d;
 }
 
 .profile {
@@ -150,7 +147,7 @@ button {
 
 .profile-title {
   margin: 14px 0 0;
-  color: #edf3ff;
+  color: #202020;
   font-size: 11.1pt;
   line-height: 1.55;
 }
@@ -186,7 +183,7 @@ button {
 
 .contact-item dd {
   margin: 0;
-  color: #edf3ff;
+  color: #202020;
   font-size: 9.4pt;
   overflow-wrap: anywhere;
 }
@@ -196,7 +193,7 @@ button {
   padding: 12px 0;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  color: #a6b4cc;
+  color: #595959;
   font-size: 9.2pt;
   line-height: 1.6;
 }
@@ -212,7 +209,7 @@ button {
 .section-heading {
   padding: 8px 10px;
   margin-bottom: 12px;
-  background: #63ead309;
+  background: #f5f5f5;
   border: 1px solid var(--line);
   border-left: 3px solid var(--green);
   border-radius: 5px;
@@ -230,7 +227,7 @@ h2 {
 
 h3 {
   margin: 0;
-  color: #edf3ff;
+  color: #202020;
   font-size: 10.7pt;
   line-height: 1.4;
   font-weight: 700;
@@ -265,7 +262,7 @@ h3 {
 
 .entry-date {
   flex-shrink: 0;
-  color: #b0a0ff;
+  color: #525252;
   font-size: 8.5pt;
   white-space: nowrap;
 }
@@ -273,7 +270,7 @@ h3 {
 .school-subtitle {
   display: block;
   margin-top: 3px;
-  color: #a6b4cc;
+  color: #595959;
   font-size: 9.5pt;
   font-weight: 400;
   line-height: 1.45;
@@ -296,7 +293,7 @@ h3 {
 
 .skill-group h3 {
   display: inline;
-  color: #edf3ff;
+  color: #202020;
   font-size: 10pt;
 }
 
@@ -332,7 +329,7 @@ h3 {
 
 .project-stack {
   flex-shrink: 0;
-  color: #b0a0ff;
+  color: #525252;
   font-size: 8.5pt;
   white-space: nowrap;
 }
@@ -345,7 +342,7 @@ h3 {
 }
 
 .language-list dt {
-  color: #edf3ff;
+  color: #202020;
   font-size: 10pt;
   font-weight: 700;
 }
@@ -368,7 +365,7 @@ h3 {
 
 .strengths strong {
   display: block;
-  color: #edf3ff;
+  color: #202020;
   font-size: 9.7pt;
   margin-bottom: 5px;
 }
@@ -618,10 +615,10 @@ h3 {
 
 /* Comfortable web CV layout; retain the dedicated print stylesheet. */
 @media screen {
- body { font-size: 17px; line-height: 1.8; background: radial-gradient(ellipse at 85% 15%, #28214a77, transparent 45%), radial-gradient(ellipse at 0 55%, #123d4355, transparent 40%), #080d1b; }
+ body { font-size: 17px; line-height: 1.8; background: var(--background); }
  .toolbar { width: 1180px; margin-top: 28px; font-size: 16px; gap: 20px; }
  .print-button { font-size: 16px; padding: 12px 18px; }
- .layout { width: 1180px; min-height: 0; padding: 36px; margin: 24px auto 40px; grid-template-columns: minmax(240px, 300px) minmax(0, 1fr); gap: 36px; background: #0b1222e8; }
+ .layout { width: 1180px; min-height: 0; padding: 36px; margin: 24px auto 40px; grid-template-columns: minmax(240px, 300px) minmax(0, 1fr); gap: 36px; background: #ffffff; }
  .profile { padding-right: 28px; }
  .profile-title { font-size: 19px; line-height: 1.6; margin-top: 18px; }
  .profile-summary { font-size: 17px; line-height: 1.85; margin-top: 26px; padding-top: 24px; }
@@ -631,7 +628,7 @@ h3 {
  .contact-item dd { font-size: 17px; }
  .job-note { font-size: 16px; padding: 18px 0; line-height: 1.8; }
  .cv-section + .cv-section { margin-top: 36px; }
- .section-heading { padding: 14px 18px; margin-bottom: 24px; background: #63ead309; }
+ .section-heading { padding: 14px 18px; margin-bottom: 24px; background: #f5f5f5; }
  h2 { font-size: 19px; line-height: 1.5; letter-spacing: .5px; }
  h3 { font-size: 19px; line-height: 1.5; }
  .entry-top, .project-top { flex-direction: column; align-items: flex-start; gap: 8px; }
@@ -640,13 +637,13 @@ h3 {
  .school-subtitle { font-size: 16px; margin-top: 6px; }
  .education-entry + .education-entry, .project-entry + .project-entry { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line); }
  .skill-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
- .skill-group, .skill-group:first-child { margin: 0; padding: 20px; background: #111a2d; border: 1px solid var(--line); border-radius: 8px; }
+ .skill-group, .skill-group:first-child { margin: 0; padding: 20px; background: #ffffff; border: 1px solid var(--line); border-radius: 8px; }
  .skill-group.wide { grid-column: 1 / -1; }
  .skill-group h3 { display: block; font-size: 18px; margin-bottom: 10px; }
  .skill-group h3::after { content: none; }
  .skill-group p { display: block; font-size: 17px; line-height: 1.8; }
  .language-list { gap: 18px; }
- .language-list > div { padding: 16px; background: #111a2d; border: 1px solid var(--line); border-radius: 8px; }
+ .language-list > div { padding: 16px; background: #ffffff; border: 1px solid var(--line); border-radius: 8px; }
  .language-list dt { font-size: 17px; }
  .language-list dd { font-size: 16px; margin-top: 8px; }
  .strengths { font-size: 17px; margin-top: 24px; padding-top: 24px; line-height: 1.8; }
@@ -687,4 +684,139 @@ h3 {
  .language-list { gap: 10px; }
  .language-list > div { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; padding: 12px 16px; }
  .language-list dd { margin: 0; }
+}
+
+/* Keep secondary information in the profile column on desktop and paper. */
+.profile > .cv-section { margin-top: 28px; }
+.profile .language-list { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.profile .language-list > div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; }
+.profile .language-list dd { margin: 0; }
+
+/* A compact A4 composition, independent of the roomy screen layout. */
+@media print {
+  html, body { font-size: 9.5pt; line-height: 1.35; }
+  .layout {
+    min-height: 0;
+    padding: 10mm;
+    grid-template-columns: 48mm minmax(0, 1fr);
+    gap: 7mm;
+  }
+  .profile h1 { font-size: 28pt; }
+  .profile-title { font-size: 10pt; line-height: 1.4; }
+  .profile-summary { font-size: 9pt; line-height: 1.45; margin-top: 16px; padding-top: 14px; }
+  .profile > .cv-section { margin-top: 20px; }
+  .profile .section-heading { padding: 5px 6px; }
+  .profile h2 { font-size: 9pt; letter-spacing: 0; }
+  .section-heading { padding: 5px 8px; margin-bottom: 8px; }
+  .cv-section + .cv-section { margin-top: 13px; }
+  h3 { font-size: 9.5pt; }
+  .entry-top, .project-top { flex-wrap: wrap; gap: 2px 8px; }
+  .entry-date, .project-stack { font-size: 8pt; white-space: normal; }
+  .entry-description { margin-top: 3px; font-size: 9pt; line-height: 1.35; }
+  .school-subtitle { font-size: 8.5pt; }
+  .skill-group h3, .skill-group p { font-size: 9pt; line-height: 1.35; }
+  .skill-group { margin-top: 4px; }
+  .education-entry + .education-entry, .project-entry + .project-entry { margin-top: 8px; }
+  .language-list dt, .language-list dd, .strengths, .strengths strong { font-size: 9pt; }
+}
+
+/* Fill the printable A4 height with readable, evenly spaced content. */
+@media print {
+  .layout {
+    min-height: 297mm;
+    align-items: stretch;
+  }
+
+  .cv-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile::before { flex-shrink: 0; }
+  .profile > .cv-section { margin-top: 16px; padding-top: 0; }
+  .profile-summary { font-size: 9.5pt; line-height: 1.5; }
+  .entry-description { font-size: 9.5pt; line-height: 1.5; }
+  h3 { font-size: 10pt; }
+  .skill-group h3, .skill-group p { font-size: 9.5pt; line-height: 1.5; }
+  .skill-group { margin-top: 6px; }
+  .education-entry + .education-entry,
+  .project-entry + .project-entry { margin-top: 12px; }
+}
+
+/* Framed portrait aligned with the profile text. */
+.profile::before { display: none; }
+.profile-photo {
+  display: block;
+  width: 176px;
+  height: 176px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  padding: 5px;
+  background: var(--paper);
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+  margin: 0 0 22px;
+  flex-shrink: 0;
+}
+
+@media screen and (min-width: 901px) {
+  .layout { grid-template-columns: 280px minmax(0, 1fr); gap: 32px; }
+  .profile { padding-right: 28px; }
+  .profile-title { margin-top: 14px; font-size: 18px; }
+  .profile-summary { line-height: 1.65; }
+  .profile .section-heading { padding: 12px; }
+  .profile h2 { font-size: 16px; }
+  .profile .language-list > div { padding: 12px; }
+  .cv-section + .cv-section { margin-top: 28px; }
+  .section-heading { margin-bottom: 18px; }
+  .education-entry + .education-entry,
+  .project-entry + .project-entry { margin-top: 18px; padding-top: 18px; }
+  .entry-description { margin-top: 8px; line-height: 1.65; }
+}
+
+@media screen and (max-width: 540px) {
+  .profile-photo { width: 144px; height: 144px; margin-bottom: 18px; }
+}
+
+@media print {
+  .profile-photo {
+    width: 38mm;
+    height: 38mm;
+    padding: 1mm;
+    border-radius: 2mm;
+    margin-bottom: 5mm;
+  }
+  .profile h1 { font-size: 27pt; }
+  .profile-title { margin-top: 10px; }
+  .contact-list { margin-top: 18px; }
+  .contact-item { margin-bottom: 12px; }
+  .job-note { margin-top: 16px; }
+  .profile > .cv-section { margin-top: 16px; padding-top: 0; }
+}
+
+/* Conventional typography with clear hierarchy and comfortable reading. */
+body { letter-spacing: normal; }
+.profile h1 { letter-spacing: -0.5px; }
+h2 { text-transform: none; letter-spacing: normal; }
+.toolbar-label { letter-spacing: 0.5px; }
+.contact-item dt { text-transform: none; letter-spacing: normal; font-weight: 700; }
+@media screen {
+  .profile-summary, .entry-description, .skill-group p, .strengths { line-height: 1.6; }
+  .profile-title { font-weight: 600; }
+  .entry-date, .project-stack { color: #505050; }
+}
+@media print {
+  .profile-summary, .entry-description,
+  .skill-group h3, .skill-group p { font-size: 10pt; line-height: 1.45; }
+  h3 { font-size: 10.5pt; }
+  .entry-date, .project-stack { font-size: 8.5pt; }
+  .contact-item dd, .language-list dt, .language-list dd,
+  .strengths, .strengths strong { font-size: 9.5pt; }
 }
